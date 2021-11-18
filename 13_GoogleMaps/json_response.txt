@@ -1,0 +1,73 @@
+@"{
+  ""PlaceSearchResponse"": [
+    {
+      ""status"": ""OK"",
+      ""PlaceSearchResponse_Id"": 0
+    }
+  ],
+  ""result"": [
+    {
+      ""name"": ""Ljubljana"",
+      ""result_Id"": 0,
+      ""formatted_address"": ""Ljubljana, Slovenia"",
+      ""icon"": ""https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png"",
+      ""reference"": ""ChIJ0YaYlvUxZUcRIOw_ghz4AAQ"",
+      ""place_id"": ""ChIJ0YaYlvUxZUcRIOw_ghz4AAQ"",
+      ""icon_background_color"": ""#7B9EB0"",
+      ""icon_mask_base_uri"": ""https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet"",
+      ""PlaceSearchResponse_Id"": 0
+    }
+  ],
+  ""type"": [
+    {
+      ""type_Text"": ""locality"",
+      ""result_Id"": 0
+    },
+    {
+      ""type_Text"": ""political"",
+      ""result_Id"": 0
+    }
+  ],
+  ""geometry"": [
+    {
+      ""geometry_Id"": 0,
+      ""result_Id"": 0
+    }
+  ],
+  ""location"": [
+    {
+      ""lat"": ""46.0569465"",
+      ""lng"": ""14.5057515"",
+      ""geometry_Id"": 0
+    }
+  ],
+  ""viewport"": [
+    {
+      ""viewport_Id"": 0,
+      ""geometry_Id"": 0
+    }
+  ],
+  ""southwest"": [
+    {
+      ""lat"": ""45.9900330"",
+      ""lng"": ""14.4195019"",
+      ""viewport_Id"": 0
+    }
+  ],
+  ""northeast"": [
+    {
+      ""lat"": ""46.1422017"",
+      ""lng"": ""14.6446963"",
+      ""viewport_Id"": 0
+    }
+  ],
+  ""photo"": [
+    {
+      ""photo_reference"": ""Aap_uECmt7DGJU1KmMXrctURaW5aclY9blirdmthufjTFu9vRu-Bi0QsBDYmoRC-jsPoHq1tuQjiZYWiHvphcSwZ0mZkHl_nqJtIX-7vOvCHftyXGnv3OVCJflK50pRsReM_q4x1ieh3HbfA5QapEFW6ZolGLJMO3qcP0_rMfKmwN7XHp59Z"",
+      ""width"": ""3120"",
+      ""height"": ""4160"",
+      ""html_attribution"": ""<a href=\""https://maps.google.com/maps/contrib/117401324736176004833\"">A Google User</a>"",
+      ""result_Id"": 0
+    }
+  ]
+}"

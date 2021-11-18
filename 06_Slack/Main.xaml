@@ -1,0 +1,504 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="389.6,249.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.Slack.Activities" xmlns:ube="clr-namespace:UiPath.BAF.Enums;assembly=UiPath.Slack" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.Slack" xmlns:ubmv="clr-namespace:UiPath.BAF.Models.Views;assembly=UiPath.Slack" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.Slack" xmlns:ucm="clr-namespace:UiPath.CodeGen.Model;assembly=UiPath.Slack" xmlns:ucmc="clr-namespace:UiPath.CodeGen.Models.Connection;assembly=UiPath.Slack" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usa="clr-namespace:UiPath.Slack.Activities;assembly=UiPath.Slack.Activities" xmlns:usam="clr-namespace:UiPath.Slack.Activities.Messages;assembly=UiPath.Slack.Activities" xmlns:use="clr-namespace:UiPath.Slack.Enums;assembly=UiPath.Slack" xmlns:usm="clr-namespace:UiPath.Slack.Models;assembly=UiPath.Slack" xmlns:usm1="clr-namespace:UiPath.Slack.Model;assembly=UiPath.Slack" xmlns:uss="clr-namespace:UiPath.Slack.Services;assembly=UiPath.Slack" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="54">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Slack.Enums</x:String>
+      <x:String>UiPath.BAF.Enums</x:String>
+      <x:String>UiPath.Swagger.Models</x:String>
+      <x:String>UiPath.CodeGen.Models.Connection</x:String>
+      <x:String>UiPath.Slack.Models</x:String>
+      <x:String>UiPath.BAF.Models.Connection</x:String>
+      <x:String>UiPath.BAF.Models.Connection.APIConnection</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.BAF.Telemetry</x:String>
+      <x:String>UiPath.BAF.Activities.ContextModel</x:String>
+      <x:String>UiPath.BAF.Models</x:String>
+      <x:String>UiPath.BAF.ServiceInterfaces</x:String>
+      <x:String>UiPath.Slack.Activities</x:String>
+      <x:String>UiPath.CodeGen.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Models.Entity</x:String>
+      <x:String>UiPath.BAF.Models.CrudOperation</x:String>
+      <x:String>UiPath.BAF.Models.Response</x:String>
+      <x:String>UiPath.Slack.Activities.Messages</x:String>
+      <x:String>UiPath.Slack.Model</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Slack</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Slack.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="PRA Fridays 6" sap:VirtualizedContainerService.HintSize="1291.2,2148" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InterruptibleWhile DisplayName="While - infiinte loop" sap:VirtualizedContainerService.HintSize="1249.6,2055.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile.Body>
+        <usa:SlackScopeActivity Connection="{x:Null}" ExistingConnection="{x:Null}" SwaggerClient="{x:Null}" DesignConnectionEnabled="True" DisplayName="Slack Scope" ExistingConnectionType="usm:SlackConnection" sap:VirtualizedContainerService.HintSize="1214.4,1888" sap2010:WorkflowViewState.IdRef="SlackScopeActivity_2" RefreshCacheEnabled="False" Scopes="PublicChannels, PrivateChannels, DirectMessage, GroupMessage, Files, Users, Chat, UserGroups, Calls, DND, Emoji, Identity, Pins, Reminders, Reactions, Stars" SelectedAuthType="API Token" SelectedDesignAuthType="API Token" TelemetryEnabled="False" ThrowExceptionOnError="False">
+          <usa:SlackScopeActivity.Body>
+            <ActivityAction x:TypeArguments="ubac:ScopeActivityContext">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ubac:ScopeActivityContext" Name="ScopeActivityContext" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1180.8,1776.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="usm1:Message[]" Name="getMessages" />
+                  <Variable x:TypeArguments="x:String" Name="cityName" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <usam:GetMessages BusinessEntityName="{x:Null}" ScopeActivityType="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="GetMessages" CrudOperation="Function" DesignConnectionEnabled="True" DisplayName="Get Messages" sap:VirtualizedContainerService.HintSize="1139.2,236.8" sap2010:WorkflowViewState.IdRef="GetMessages_2">
+                  <usam:GetMessages.BusinessEntity>
+                    <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Name="GetMessages">
+                      <ubme:BusinessEntity.AllFields>
+                        <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                      </ubme:BusinessEntity.AllFields>
+                      <ubme:BusinessEntity.EntityMetadata>
+                        <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="GetMessages">
+                          <ubme:EntityMetadata.Metadata>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0" />
+                          </ubme:EntityMetadata.Metadata>
+                        </ubme:EntityMetadata>
+                      </ubme:BusinessEntity.EntityMetadata>
+                      <ubme:BusinessEntity.SelectedFields>
+                        <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                      </ubme:BusinessEntity.SelectedFields>
+                      <ubme:BusinessEntity.TelemetryProperties>
+                        <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                      </ubme:BusinessEntity.TelemetryProperties>
+                    </ubme:BusinessEntity>
+                  </usam:GetMessages.BusinessEntity>
+                  <usam:GetMessages.PopulatedAPIParameters>
+                    <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
+                  </usam:GetMessages.PopulatedAPIParameters>
+                  <usam:GetMessages.SelectedFields>
+                    <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
+                      <ucm:CodeGenEntityField x:TypeArguments="use:ConversationType" ArgumentValue="{x:Null}" ContainingType="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" ArgumentDirection="In" ArgumentType="use:ConversationType" DataType="ConversationType" Description="The type of conversation you want to get messages from" DisplayName="Conversation Type" FieldName="Conversation Type" FormDataType="ComboBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="True">
+                        <ucm:CodeGenEntityField.DefaultValue>
+                          <use:ConversationType>Channel</use:ConversationType>
+                        </ucm:CodeGenEntityField.DefaultValue>
+                        <ucm:CodeGenEntityField.Value>
+                          <use:ConversationType>Channel</use:ConversationType>
+                        </ucm:CodeGenEntityField.Value>
+                      </ucm:CodeGenEntityField>
+                      <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The name of the channel" DisplayName="Channel Name" FieldName="Channel Name" FormDataType="TextBoxWithButton" InArgumentValue="weather" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                        <ucm:CodeGenEntityField.ArgumentValue>
+                          <InArgument x:TypeArguments="x:String">weather</InArgument>
+                        </ucm:CodeGenEntityField.ArgumentValue>
+                        <ucm:CodeGenEntityField.Metadata>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <ube:WindowType x:Key="WindowType">FindObject</ube:WindowType>
+                            <ubmv:FindObjectInput ParentQuery="{x:Null}" ParentQueryLabel="{x:Null}" Query="{x:Null}" x:Key="WindowTypeInput" IsMultiSelectAllowed="False" ObjectType="Channel" ReturnColumn="Name" ShouldLoadOnStart="False" WindowName="Channel">
+                              <ubmv:FindObjectInput.ColumnsToShow>
+                                <scg:List x:TypeArguments="x:String" Capacity="4">
+                                  <x:String>Id</x:String>
+                                  <x:String>Name</x:String>
+                                </scg:List>
+                              </ubmv:FindObjectInput.ColumnsToShow>
+                              <ubmv:FindObjectInput.Metadata>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:String x:Key="ChannelTypesKey">public_channel,private_channel</x:String>
+                                </scg:Dictionary>
+                              </ubmv:FindObjectInput.Metadata>
+                              <ubmv:FindObjectInput.QueryFilterColumns>
+                                <scg:List x:TypeArguments="x:String" Capacity="4">
+                                  <x:String>Id</x:String>
+                                  <x:String>Name</x:String>
+                                </scg:List>
+                              </ubmv:FindObjectInput.QueryFilterColumns>
+                            </ubmv:FindObjectInput>
+                          </scg:Dictionary>
+                        </ucm:CodeGenEntityField.Metadata>
+                      </ucm:CodeGenEntityField>
+                      <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The id of the channel" DisplayName="Channel ID" FieldName="Channel ID" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                      <ucm:CodeGenEntityField x:TypeArguments="x:Boolean" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="If checked, all returned messages are marked as read in Slack. Default is false." DisplayName="MarkAsRead" FieldName="MarkAsRead" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                      <ucm:CodeGenEntityField x:TypeArguments="x:Int32" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of messages returned. If unspecified, this number is 100." DisplayName="MaxResults" FieldName="MaxResults" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                      <ucm:CodeGenEntityField x:TypeArguments="usm1:Message[]" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="usm1:Message[]" DataType="Message[]" Description="An array of the most recent messages in the specified conversation.  If none exist, an empty array is returned." DisplayName="Messages" FieldName="Messages" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" OutArgumentValue="[getMessages]" ShouldFilterOnChange="False">
+                        <ucm:CodeGenEntityField.ArgumentValue>
+                          <OutArgument x:TypeArguments="usm1:Message[]">[getMessages]</OutArgument>
+                        </ucm:CodeGenEntityField.ArgumentValue>
+                      </ucm:CodeGenEntityField>
+                    </scg:List>
+                  </usam:GetMessages.SelectedFields>
+                  <usam:GetMessages.ServiceFactory>
+                    <uss:SlackServiceFactory />
+                  </usam:GetMessages.ServiceFactory>
+                  <usam:GetMessages.TelemetryProperties>
+                    <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                  </usam:GetMessages.TelemetryProperties>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </usam:GetMessages>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1139.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[getMessages(0).User+&quot; - &quot;+getMessages(0).Text.Tostring]" />
+                <If Condition="[getMessages(0).user = &quot;U024SSM4VRQ&quot;]" DisplayName="If - laste message is from our bot user" sap:VirtualizedContainerService.HintSize="1139.2,1304.8" sap2010:WorkflowViewState.IdRef="If_4">
+                  <If.Then>
+                    <Delay DisplayName="Delay 5s" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="895.2,1145.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="requestResult" />
+                        <Variable x:TypeArguments="njl:JObject" Name="jsonResult" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="853.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[cityName]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[getMessages(0).Text]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[&quot;http://api.openweathermap.org/data/2.5/weather?q=&quot;+cityName+&quot;&amp;appid=16579efbc01f0d19f94bae1e56ccc358&amp;units=metric&quot;]" sap:VirtualizedContainerService.HintSize="853.6,22.4" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[requestResult]" TimeoutMS="6000">
+                        <ui:HttpClient.Attachments>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Attachments>
+                        <ui:HttpClient.Cookies>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Cookies>
+                        <ui:HttpClient.Headers>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Headers>
+                        <ui:HttpClient.Parameters>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Parameters>
+                        <ui:HttpClient.UrlSegments>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.UrlSegments>
+                      </ui:HttpClient>
+                      <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="853.6,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[jsonResult]" JsonString="[requestResult]" />
+                      <If Condition="[jsonResult(&quot;cod&quot;).ToString = &quot;200&quot;]" DisplayName="If - result is 200" sap:VirtualizedContainerService.HintSize="853.6,790.4" sap2010:WorkflowViewState.IdRef="If_3">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="425.6,631.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="location" />
+                              <Variable x:TypeArguments="x:String" Name="temperature" />
+                              <Variable x:TypeArguments="x:String" Name="description" />
+                              <Variable x:TypeArguments="x:String" Name="weather" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="384,161.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[location]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[jsonResult("name").ToString+", "+jsonResult("sys")("country").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[temperature]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[jsonResult("main")("temp").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[description]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[jsonResult("weather")(0)("main").ToString+" - "+jsonResult("weather")(0)("description").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <Assign DisplayName="Assign | final weather" sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[weather]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">["Weather at "+location+" is "+description+", temperature is "+temperature+"°C."]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <usam:SendMessage BusinessEntityName="{x:Null}" ScopeActivityType="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="SendMessage" CrudOperation="Function" DesignConnectionEnabled="True" DisplayName="Send Message" sap:VirtualizedContainerService.HintSize="384,236.8" sap2010:WorkflowViewState.IdRef="SendMessage_3">
+                              <usam:SendMessage.BusinessEntity>
+                                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID1}" Name="SendMessage">
+                                  <ubme:BusinessEntity.AllFields>
+                                    <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                                  </ubme:BusinessEntity.AllFields>
+                                  <ubme:BusinessEntity.EntityMetadata>
+                                    <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="SendMessage">
+                                      <ubme:EntityMetadata.Metadata>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID1" />
+                                      </ubme:EntityMetadata.Metadata>
+                                    </ubme:EntityMetadata>
+                                  </ubme:BusinessEntity.EntityMetadata>
+                                  <ubme:BusinessEntity.SelectedFields>
+                                    <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                                  </ubme:BusinessEntity.SelectedFields>
+                                  <ubme:BusinessEntity.TelemetryProperties>
+                                    <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                  </ubme:BusinessEntity.TelemetryProperties>
+                                </ubme:BusinessEntity>
+                              </usam:SendMessage.BusinessEntity>
+                              <usam:SendMessage.PopulatedAPIParameters>
+                                <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
+                              </usam:SendMessage.PopulatedAPIParameters>
+                              <usam:SendMessage.SelectedFields>
+                                <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
+                                  <ucm:CodeGenEntityField x:TypeArguments="use:ConversationType" ArgumentValue="{x:Null}" ContainingType="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" ArgumentDirection="In" ArgumentType="use:ConversationType" DataType="ConversationType" Description="The type of conversation you want to get messages from" DisplayName="Conversation Type" FieldName="Conversation Type" FormDataType="ComboBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="True">
+                                    <ucm:CodeGenEntityField.DefaultValue>
+                                      <use:ConversationType>Channel</use:ConversationType>
+                                    </ucm:CodeGenEntityField.DefaultValue>
+                                    <ucm:CodeGenEntityField.Value>
+                                      <use:ConversationType>Channel</use:ConversationType>
+                                    </ucm:CodeGenEntityField.Value>
+                                  </ucm:CodeGenEntityField>
+                                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The name of the channel" DisplayName="Channel Name" FieldName="Channel Name" FormDataType="TextBoxWithButton" InArgumentValue="weather" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                    <ucm:CodeGenEntityField.ArgumentValue>
+                                      <InArgument x:TypeArguments="x:String">weather</InArgument>
+                                    </ucm:CodeGenEntityField.ArgumentValue>
+                                    <ucm:CodeGenEntityField.Metadata>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <ube:WindowType x:Key="WindowType">FindObject</ube:WindowType>
+                                        <ubmv:FindObjectInput ParentQuery="{x:Null}" ParentQueryLabel="{x:Null}" Query="{x:Null}" x:Key="WindowTypeInput" IsMultiSelectAllowed="False" ObjectType="Channel" ReturnColumn="Name" ShouldLoadOnStart="False" WindowName="Channel">
+                                          <ubmv:FindObjectInput.ColumnsToShow>
+                                            <scg:List x:TypeArguments="x:String" Capacity="4">
+                                              <x:String>Id</x:String>
+                                              <x:String>Name</x:String>
+                                            </scg:List>
+                                          </ubmv:FindObjectInput.ColumnsToShow>
+                                          <ubmv:FindObjectInput.Metadata>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:String x:Key="ChannelTypesKey">public_channel,private_channel</x:String>
+                                            </scg:Dictionary>
+                                          </ubmv:FindObjectInput.Metadata>
+                                          <ubmv:FindObjectInput.QueryFilterColumns>
+                                            <scg:List x:TypeArguments="x:String" Capacity="4">
+                                              <x:String>Id</x:String>
+                                              <x:String>Name</x:String>
+                                            </scg:List>
+                                          </ubmv:FindObjectInput.QueryFilterColumns>
+                                        </ubmv:FindObjectInput>
+                                      </scg:Dictionary>
+                                    </ucm:CodeGenEntityField.Metadata>
+                                  </ucm:CodeGenEntityField>
+                                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The id of the channel" DisplayName="Channel ID" FieldName="Channel ID" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The message you want to send" DisplayName="Text" FieldName="Text" FormDataType="ExpressionTextBox" InArgumentValue="[weather]" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                    <ucm:CodeGenEntityField.ArgumentValue>
+                                      <InArgument x:TypeArguments="x:String">[weather]</InArgument>
+                                    </ucm:CodeGenEntityField.ArgumentValue>
+                                  </ucm:CodeGenEntityField>
+                                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The file you want to attach to your message" DisplayName="File" FieldName="File" FormDataType="FilePicker" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                                  <ucm:CodeGenEntityField x:TypeArguments="x:Boolean" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Send this message as user or bot. Defaults to true (sends as user)" DisplayName="As User" FieldName="As User" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                                  <ucm:CodeGenEntityField x:TypeArguments="usm1:Message" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="usm1:Message" DataType="Message" Description="The message that was sent" DisplayName="Message" FieldName="Message" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                                </scg:List>
+                              </usam:SendMessage.SelectedFields>
+                              <usam:SendMessage.ServiceFactory>
+                                <uss:SlackServiceFactory />
+                              </usam:SendMessage.ServiceFactory>
+                              <usam:SendMessage.TelemetryProperties>
+                                <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                              </usam:SendMessage.TelemetryProperties>
+                            </usam:SendMessage>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <usam:SendMessage BusinessEntityName="{x:Null}" ScopeActivityType="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="SendMessage" CrudOperation="Function" DesignConnectionEnabled="True" DisplayName="Send Message" sap:VirtualizedContainerService.HintSize="384,236.8" sap2010:WorkflowViewState.IdRef="SendMessage_4">
+                            <usam:SendMessage.BusinessEntity>
+                              <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID2}" Name="SendMessage">
+                                <ubme:BusinessEntity.AllFields>
+                                  <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                                </ubme:BusinessEntity.AllFields>
+                                <ubme:BusinessEntity.EntityMetadata>
+                                  <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="SendMessage">
+                                    <ubme:EntityMetadata.Metadata>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID2" />
+                                    </ubme:EntityMetadata.Metadata>
+                                  </ubme:EntityMetadata>
+                                </ubme:BusinessEntity.EntityMetadata>
+                                <ubme:BusinessEntity.SelectedFields>
+                                  <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                                </ubme:BusinessEntity.SelectedFields>
+                                <ubme:BusinessEntity.TelemetryProperties>
+                                  <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                </ubme:BusinessEntity.TelemetryProperties>
+                              </ubme:BusinessEntity>
+                            </usam:SendMessage.BusinessEntity>
+                            <usam:SendMessage.PopulatedAPIParameters>
+                              <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
+                            </usam:SendMessage.PopulatedAPIParameters>
+                            <usam:SendMessage.SelectedFields>
+                              <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
+                                <ucm:CodeGenEntityField x:TypeArguments="use:ConversationType" ArgumentValue="{x:Null}" ContainingType="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" ArgumentDirection="In" ArgumentType="use:ConversationType" DataType="ConversationType" Description="The type of conversation you want to get messages from" DisplayName="Conversation Type" FieldName="Conversation Type" FormDataType="ComboBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="True">
+                                  <ucm:CodeGenEntityField.DefaultValue>
+                                    <use:ConversationType>Channel</use:ConversationType>
+                                  </ucm:CodeGenEntityField.DefaultValue>
+                                  <ucm:CodeGenEntityField.Value>
+                                    <use:ConversationType>Channel</use:ConversationType>
+                                  </ucm:CodeGenEntityField.Value>
+                                </ucm:CodeGenEntityField>
+                                <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The name of the channel" DisplayName="Channel Name" FieldName="Channel Name" FormDataType="TextBoxWithButton" InArgumentValue="weather" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                  <ucm:CodeGenEntityField.ArgumentValue>
+                                    <InArgument x:TypeArguments="x:String">weather</InArgument>
+                                  </ucm:CodeGenEntityField.ArgumentValue>
+                                  <ucm:CodeGenEntityField.Metadata>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <ube:WindowType x:Key="WindowType">FindObject</ube:WindowType>
+                                      <ubmv:FindObjectInput ParentQuery="{x:Null}" ParentQueryLabel="{x:Null}" Query="{x:Null}" x:Key="WindowTypeInput" IsMultiSelectAllowed="False" ObjectType="Channel" ReturnColumn="Name" ShouldLoadOnStart="False" WindowName="Channel">
+                                        <ubmv:FindObjectInput.ColumnsToShow>
+                                          <scg:List x:TypeArguments="x:String" Capacity="4">
+                                            <x:String>Id</x:String>
+                                            <x:String>Name</x:String>
+                                          </scg:List>
+                                        </ubmv:FindObjectInput.ColumnsToShow>
+                                        <ubmv:FindObjectInput.Metadata>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:String x:Key="ChannelTypesKey">public_channel,private_channel</x:String>
+                                          </scg:Dictionary>
+                                        </ubmv:FindObjectInput.Metadata>
+                                        <ubmv:FindObjectInput.QueryFilterColumns>
+                                          <scg:List x:TypeArguments="x:String" Capacity="4">
+                                            <x:String>Id</x:String>
+                                            <x:String>Name</x:String>
+                                          </scg:List>
+                                        </ubmv:FindObjectInput.QueryFilterColumns>
+                                      </ubmv:FindObjectInput>
+                                    </scg:Dictionary>
+                                  </ucm:CodeGenEntityField.Metadata>
+                                </ucm:CodeGenEntityField>
+                                <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The id of the channel" DisplayName="Channel ID" FieldName="Channel ID" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                                <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The message you want to send" DisplayName="Text" FieldName="Text" FormDataType="ExpressionTextBox" InArgumentValue="[&quot;No city called &quot;+cityName]" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                  <ucm:CodeGenEntityField.ArgumentValue>
+                                    <InArgument x:TypeArguments="x:String">["No city called "+cityName]</InArgument>
+                                  </ucm:CodeGenEntityField.ArgumentValue>
+                                </ucm:CodeGenEntityField>
+                                <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The file you want to attach to your message" DisplayName="File" FieldName="File" FormDataType="FilePicker" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                                <ucm:CodeGenEntityField x:TypeArguments="x:Boolean" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Send this message as user or bot. Defaults to true (sends as user)" DisplayName="As User" FieldName="As User" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                                <ucm:CodeGenEntityField x:TypeArguments="usm1:Message" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="usm1:Message" DataType="Message" Description="The message that was sent" DisplayName="Message" FieldName="Message" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                              </scg:List>
+                            </usam:SendMessage.SelectedFields>
+                            <usam:SendMessage.ServiceFactory>
+                              <uss:SlackServiceFactory />
+                            </usam:SendMessage.ServiceFactory>
+                            <usam:SendMessage.TelemetryProperties>
+                              <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                            </usam:SendMessage.TelemetryProperties>
+                          </usam:SendMessage>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </If.Else>
+                </If>
+              </Sequence>
+            </ActivityAction>
+          </usa:SlackScopeActivity.Body>
+          <usa:SlackScopeActivity.ConnectionParameters>
+            <scg:List x:TypeArguments="ucmc:ConnectionParam" Capacity="4">
+              <ucmc:ConnectionParam Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" Description="The OAuth Access Token" Mandatory="True" Name="API Token">
+                <ucmc:ConnectionParam.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">xoxp-2146020747750-2162905165874-2156187434342-bd9cb24c472efbc54f9049ed86b3ad2e</InArgument>
+                </ucmc:ConnectionParam.ArgumentValue>
+              </ucmc:ConnectionParam>
+            </scg:List>
+          </usa:SlackScopeActivity.ConnectionParameters>
+          <usa:SlackScopeActivity.DesignConnectionParameters>
+            <scg:List x:TypeArguments="ucmc:ConnectionParam" Capacity="4">
+              <ucmc:ConnectionParam ArgumentValue="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" Description="The OAuth Access Token" Mandatory="True" Name="API Token" Value="xoxp-2146020747750-2162905165874-2156187434342-bd9cb24c472efbc54f9049ed86b3ad2e" />
+            </scg:List>
+          </usa:SlackScopeActivity.DesignConnectionParameters>
+          <usa:SlackScopeActivity.DesignConnectionRequest>
+            <usm:SlackConnectionParameters APIKey="{x:Null}" BaseUrl="{x:Null}" BearerToken="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" ConfigFileClient="{x:Null}" ConfigFilePath="{x:Null}" ExistingConnection="{x:Null}" JWTToken="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" SwaggerClient="{x:Null}" Username="{x:Null}" APIToken="xoxp-2146020747750-2162905165874-2156187434342-bd9cb24c472efbc54f9049ed86b3ad2e" AuthType="ApiToken">
+              <usm:SlackConnectionParameters.Scopes>
+                <use:SlackScopes>PublicChannels, PrivateChannels, DirectMessage, GroupMessage, Files, Users, Chat, UserGroups, Calls, DND, Emoji, Identity, Pins, Reminders, Reactions, Stars</use:SlackScopes>
+              </usm:SlackConnectionParameters.Scopes>
+            </usm:SlackConnectionParameters>
+          </usa:SlackScopeActivity.DesignConnectionRequest>
+          <usa:SlackScopeActivity.ServiceFactory>
+            <uss:SlackServiceFactory />
+          </usa:SlackScopeActivity.ServiceFactory>
+          <usa:SlackScopeActivity.SupportedAuthTypes>
+            <scg:List x:TypeArguments="x:String" Capacity="4">
+              <x:String>Existing Connection</x:String>
+              <x:String>OAuth Authorization Code</x:String>
+              <x:String>API Token</x:String>
+            </scg:List>
+          </usa:SlackScopeActivity.SupportedAuthTypes>
+          <usa:SlackScopeActivity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </usa:SlackScopeActivity.TelemetryProperties>
+        </usa:SlackScopeActivity>
+      </ui:InterruptibleWhile.Body>
+      <ui:InterruptibleWhile.Condition>
+        <Literal x:TypeArguments="x:Boolean" Value="True" />
+      </ui:InterruptibleWhile.Condition>
+    </ui:InterruptibleWhile>
+  </Sequence>
+</Activity>

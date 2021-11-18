@@ -1,0 +1,16 @@
+﻿{
+  "Id": "-kDhARF87UukcvHLPztUug",
+  "Reference": "DR3nWvKFmkSKTdHWGTx_PQ/-kDhARF87UukcvHLPztUug",
+  "ParentRef": "DR3nWvKFmkSKTdHWGTx_PQ/gBA2kz4pqE2Vw9kbZLsYvw",
+  "Name": "Plus",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2021-07-08T09:41:12.9531277Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-07-08T09:41:48.1832756Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

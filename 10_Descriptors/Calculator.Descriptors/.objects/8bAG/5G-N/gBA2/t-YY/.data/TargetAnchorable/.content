@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="99tTp6DQPUWP6kossG7cYA" DesignTimeRectangle="12, 405, 89, 49" ElementType="Button" FriendlyName="'1'" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num1Button' cls='Button' name='One' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num1Button' cls='Button' name='One' role='button' check:fulltext='1' /&gt;" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0HuX5aiieMEWoHbEZHwOzmw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="8cfe2115da7d4814ff00a190c1be77ed.png" xmlns="">0jlZrNR0oGU-4QwK1xNO5JA</imageRef>
+</TargetAnchorable>

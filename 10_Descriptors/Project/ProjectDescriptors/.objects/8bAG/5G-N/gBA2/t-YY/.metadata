@@ -1,0 +1,17 @@
+﻿{
+  "Id": "t-YY0hf1gk2xKJslW2s6oQ",
+  "Reference": "DR3nWvKFmkSKTdHWGTx_PQ/t-YY0hf1gk2xKJslW2s6oQ",
+  "ParentRef": "DR3nWvKFmkSKTdHWGTx_PQ/gBA2kz4pqE2Vw9kbZLsYvw",
+  "Name": "Num1",
+  "Description": "number one",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2021-07-08T09:39:58.863065Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-07-08T09:40:29.5427222Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

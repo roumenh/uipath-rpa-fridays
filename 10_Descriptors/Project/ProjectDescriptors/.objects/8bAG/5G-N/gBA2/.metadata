@@ -1,0 +1,15 @@
+﻿{
+  "Id": "gBA2kz4pqE2Vw9kbZLsYvw",
+  "Reference": "DR3nWvKFmkSKTdHWGTx_PQ/gBA2kz4pqE2Vw9kbZLsYvw",
+  "ParentRef": "DR3nWvKFmkSKTdHWGTx_PQ/5G-NdSOJeE-zUJytZRhpMg",
+  "Name": "Standard",
+  "Type": "Screen",
+  "Created": "2021-07-08T09:38:38.3962693Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-07-08T09:38:42.4898301Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

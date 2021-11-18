@@ -1,0 +1,166 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Example5" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1232,1677" sap2010:WorkflowViewState.IdRef="Example5_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gavvd="clr-namespace:Google.Apis.Vision.v1.Data;assembly=Google.Apis.Vision.v1" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ug="clr-namespace:UiPath.GoogleVision;assembly=UiPath.GoogleVision" xmlns:uga="clr-namespace:UiPath.GoogleVision.Activities;assembly=UiPath.GoogleVision.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="41">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.GoogleVision.Models</x:String>
+      <x:String>UiPath.GoogleVision.Telemetry</x:String>
+      <x:String>UiPath.GoogleVision</x:String>
+      <x:String>UiPath.GoogleVision.Contracts</x:String>
+      <x:String>Google.Apis.Vision.v1</x:String>
+      <x:String>Google.Apis.Services</x:String>
+      <x:String>UiPath.GoogleVision.Activities</x:String>
+      <x:String>UiPath.GoogleVision.Activities.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.GoogleVision.Enums</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>Google.Apis.Vision.v1.Data</x:String>
+      <x:String>Google.Apis.Requests</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="37">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GoogleVision</AssemblyReference>
+      <AssemblyReference>Google.Apis.Vision.v1</AssemblyReference>
+      <AssemblyReference>Google.Apis</AssemblyReference>
+      <AssemblyReference>UiPath.GoogleVision.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="turns on camera  and returns Joy, Anger, Surprised, Angry as detected :)&#xA;You have to kill this robot to end it." DisplayName="Example5 - Face recognition" sap:VirtualizedContainerService.HintSize="756,1512" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Application | Camera" FileName="Microsoft.WindowsCamera_8wekyb3d8bbwe!App" sap:VirtualizedContainerService.HintSize="714,1378" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="469db6b66e6700420854da1cc06784d9" Selector="&lt;wnd app='applicationframehost.exe' title='Camera' /&gt;">
+      <ui:OpenApplication.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="680,1192" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Delay DisplayName="Delay 5 s" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uga:GoogleVisionScope ContinueOnError="{x:Null}" CredentialID="{x:Null}" CredentialSecret="{x:Null}" Password="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" ApiKey="add your API key" AuthenticationType="ApiKey" DisplayName="Google Vision Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="638,1038" sap2010:WorkflowViewState.IdRef="GoogleVisionScope_5" KeyPath="C:\Users\RomanHruška\OneDrive - Robot ICT s.r.o\RPA Fridays\07_GoogleVision\SolutionProjectGoogleVision\robotict-74edd19aea08.json" KeyType="json" Services="Vision" UserEmail="hruska.r@gmail.com">
+              <uga:GoogleVisionScope.Body>
+                <ActivityAction x:TypeArguments="ug:SimpleObjectContainer">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GoogleVisionScope" />
+                  </ActivityAction.Argument>
+                  <ui:InterruptibleWhile Condition="True" DisplayName="While | Infinite loop" sap:VirtualizedContainerService.HintSize="604,952" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                    <ui:InterruptibleWhile.Body>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="568,787" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="ui:Image" Name="shot" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot" sap:VirtualizedContainerService.HintSize="526,68" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" Screenshot="[shot]">
+                          <ui:TakeScreenshot.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f10f8e90-faed-4fa7-a651-b6916b20a1ed">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:TakeScreenshot.Target>
+                        </ui:TakeScreenshot>
+                        <ui:SaveImage DisplayName="Save Image" FileName="shot.jpg" sap:VirtualizedContainerService.HintSize="526,92" sap2010:WorkflowViewState.IdRef="SaveImage_2" Image="[shot]" />
+                        <Sequence DisplayName="Sequence | Vision scope" sap:VirtualizedContainerService.HintSize="526,455" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="sd:Rectangle[]" Name="faceRects" />
+                            <Variable x:TypeArguments="gavvd:AnnotateImageResponse[]" Name="annoResult" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uga:AnnotateImage ContinueOnError="{x:Null}" ImageURL="{x:Null}" MaxNumberOfResults="{x:Null}" TelemetryService="{x:Null}" objectContainer="{x:Null}" visionService="{x:Null}" AnalysisType="FaceDetection" AuthScopesInvalid="False" DisplayName="Annotate Image" sap:VirtualizedContainerService.HintSize="484,86" sap2010:WorkflowViewState.IdRef="AnnotateImage_2" ImagePath="shot.jpg" Result="[annoResult]" />
+                          <If Condition="[not isnothing(annoResult(0).FaceAnnotations)]" DisplayName="If | any face detected" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_1">
+                            <If.Then>
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Joy? - &quot;+annoResult(0).FaceAnnotations(0).JoyLikelihood+vbCrLf+&quot;Anger? - &quot;+annoResult(0).FaceAnnotations(0).AngerLikelihood+vbCrLf+&quot;Surprised? - &quot;+annoResult(0).FaceAnnotations(0).SurpriseLikelihood+vbCrLf+&quot;Sorrow? - &quot;+annoResult(0).FaceAnnotations(0).SorrowLikelihood]" />
+                            </If.Then>
+                          </If>
+                        </Sequence>
+                      </Sequence>
+                    </ui:InterruptibleWhile.Body>
+                  </ui:InterruptibleWhile>
+                </ActivityAction>
+              </uga:GoogleVisionScope.Body>
+            </uga:GoogleVisionScope>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenApplication.Body>
+    </ui:OpenApplication>
+  </Sequence>
+</Activity>

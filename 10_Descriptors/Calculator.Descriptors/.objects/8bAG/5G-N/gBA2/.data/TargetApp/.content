@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" ContentHash="p5rRZvgJ-U2JeV0omVgCmw" FilePath="Microsoft.WindowsCalculator_8wekyb3d8bbwe!App" Selector="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_*!App' title='Calculator' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="InformativeScreenshot" originalValue="762a871ccf6fd3c33ae4ca43e0405876.png" xmlns="">0l-N4-hfd70-SxF0QQxWI_g</imageRef>
+</TargetApp>

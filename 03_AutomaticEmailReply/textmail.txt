@@ -1,0 +1,17 @@
+Dear Robot,
+
+please handle following issue:
+
+Timestamp: 21/05/2021 12:35:02
+ID: 616165165
+Type: Coffee machine
+Brand: BeanyBean
+Problem: Refill beans
+Severity: 5
+Comment: Hurry up, you lazy robot!
+
+
+Have a lovely day
+
+Your coffee lover
+Eric

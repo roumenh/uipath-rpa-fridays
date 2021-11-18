@@ -1,0 +1,16 @@
+﻿{
+  "Id": "6SaNK3KtqUanKMs5zRfdBQ",
+  "Reference": "DR3nWvKFmkSKTdHWGTx_PQ/6SaNK3KtqUanKMs5zRfdBQ",
+  "ParentRef": "DR3nWvKFmkSKTdHWGTx_PQ/gBA2kz4pqE2Vw9kbZLsYvw",
+  "Name": "Result",
+  "Type": "Element",
+  "TaxonomyType": "Text",
+  "Created": "2021-07-08T09:42:34.2165656Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-07-08T09:42:55.7691558Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

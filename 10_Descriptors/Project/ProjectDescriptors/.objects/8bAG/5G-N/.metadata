@@ -1,0 +1,12 @@
+﻿{
+  "Id": "5G-NdSOJeE-zUJytZRhpMg",
+  "Reference": "DR3nWvKFmkSKTdHWGTx_PQ/5G-NdSOJeE-zUJytZRhpMg",
+  "ParentRef": "DR3nWvKFmkSKTdHWGTx_PQ/8bAGEK4sRU-6tJEPlr5csA",
+  "Name": "1.0.0",
+  "Type": "AppVersion",
+  "Created": "2021-07-08T09:38:19.0027402Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-07-08T09:38:19.0027402Z"
+}

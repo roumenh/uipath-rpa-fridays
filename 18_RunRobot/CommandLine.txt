@@ -1,0 +1,10 @@
+CMD, go to:
+
+C:\Users\(your user name)\AppData\Local\UiPath\app-(latest version of UiPath)\
+
+and run
+
+UiRobot execute --file "path to Main.xaml"
+
+
+run "UiRobot" without arguments for help
