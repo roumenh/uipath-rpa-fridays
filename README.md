@@ -1,5 +1,6 @@
 # RPA Fridays
 Workflows from weekly Live webinars on Robotic Process Automation using UiPath Studio
+
 Watch the videos here: https://www.youtube.com/playlist?list=PL0I7SqJ28E1ICqQ5UOYGijiW-qkwAcpVO 
 
 ## #01 Basic Excel data manipulation
