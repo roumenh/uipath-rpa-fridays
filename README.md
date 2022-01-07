@@ -80,4 +80,10 @@ This Friday we will take a look at Outlook Calendar activities from UiPath's Mar
 ## #24 Data validation through e-mail
 Small practical UiPath RPA Automation project (use case). Emails with attachments are taken by robot from the inbox and attachments are saved. With saved attachments (Excel files), validation of the data is performed. In case of invalid data, invalid cell is highlighted red. Report is created saying in what cell is which problem.
 
+## #25 UiPath & MongoDB
+See how to integrate UiPath with MongoDB. Watch this tutorial how to read collections from MongoDB, insert new entries, delete entries and also (using C# invoke code workaround) how to update (edit) entries. Follow me in this step by step tutorial.
+
+## #26 UiPath Unattended Robot Setup (full tutorial)
+Setup of Unattended Robot is not easy, but with in tutorial I will guide you through the full setup. I will show you how to create a Robot User, how to install Unattended Robot service on desired machine and how to make it all working together. I will be also talking about licenses and their allocation. Also I will explain how Orchestrator is structured and what are Tenants and Folders good for.
+
 ### Thank you for comments, support, subscribe!
