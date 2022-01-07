@@ -1,0 +1,141 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="mongo_activities" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="new value for field specified in &quot;in_fieldToUpdate&quot;" Name="in_valueToUpdate" Type="InArgument(x:String)" />
+    <x:Property Name="in_mongoConnectionString" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="database name" Name="in_mongoDatabase" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Name of the collection that we wish to update a field in" Name="in_collectionName" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="name of the field we wish to update a value in it" Name="in_fieldToUpdate" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="value of field that we filter with" Name="in_filterValue" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="to specify a DB entry that we want to Update some field in , we use some other field (that provides unique identification). In case more entries will fall under the same criteria, only first entry will be updated." Name="in_filterBy" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="number of altered rows (should be 1)" Name="out_modifiedCount" Type="OutArgument(x:Int64)" />
+  </x:Members>
+  <this:mongo_activities.in_valueToUpdate>
+    <InArgument x:TypeArguments="x:String" />
+  </this:mongo_activities.in_valueToUpdate>
+  <this:mongo_activities.in_mongoDatabase>
+    <InArgument x:TypeArguments="x:String" />
+  </this:mongo_activities.in_mongoDatabase>
+  <this:mongo_activities.in_fieldToUpdate>
+    <InArgument x:TypeArguments="x:String" />
+  </this:mongo_activities.in_fieldToUpdate>
+  <this:mongo_activities.in_filterValue>
+    <InArgument x:TypeArguments="x:String" />
+  </this:mongo_activities.in_filterValue>
+  <this:mongo_activities.in_filterBy>
+    <InArgument x:TypeArguments="x:String" />
+  </this:mongo_activities.in_filterBy>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>863.2,1088.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>mongo_activities_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="43">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>MongoActivities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Threading</x:String>
+      <x:String>System.Threading.Tasks</x:String>
+      <x:String>MongoDB.Bson</x:String>
+      <x:String>MongoDB.Driver</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>MongoDB.Driver</AssemblyReference>
+      <AssemblyReference>MongoDB.Driver.Core</AssemblyReference>
+      <AssemblyReference>MongoActivities</AssemblyReference>
+      <AssemblyReference>MongoDB.Bson</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>MongoDBCollectionToDataTable</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>MongoDB.Libmongocrypt</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>MongoDB.Driver.Legacy</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Workflow to update certain field in a mongo DB entry filtered by certain field and value&#xA;&#xA;to specify a DB entry that we want to Update some field in , we use some other field (that provides unique identification). In case more entries will fall under the same criteria, only first entry will be updated." DisplayName="Mongo_UpdateField" sap:VirtualizedContainerService.HintSize="752.8,1024" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="711.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Mongo_UpdateField started&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="711.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Updating collection &quot;+in_collectionName+&quot; field &quot;+in_fieldToUpdate+&quot; = &quot;+in_valueToUpdate+&quot; where &quot;+in_filterBy+&quot; = &quot;+in_filterValue]" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Console.WriteLine(&quot;Connecting to DB...&quot;);&#xA;MongoClient dbClient = new MongoClient(mongoConnectionString);&#xA;var db = dbClient.GetDatabase(mongoDatabase);&#xA;&#xA;&#xA;long UpdateField(string collectionName, string filterBy, string filterValue, string fieldToUpdate, string valueToUpdate){&#xA;    /*&#xA;    Function to update fields based on other fields. Works only with strings.&#xA;    */&#xA;    var updateFilter = Builders&lt;BsonDocument&gt;.Filter.Eq(filterBy, filterValue);     // setup a filter based on some field and value (ID preferably)&#xA;    var collection = db.GetCollection&lt;BsonDocument&gt;(collectionName);                // retrieves desired collection (carefully, db can be null here)&#xA;    var update = Builders&lt;BsonDocument&gt;.Update.Set(fieldToUpdate, valueToUpdate);   // runs and Update builder with field and value to set&#xA;    var result = collection.UpdateOne(updateFilter, update);                        // updates the colection :-)&#xA;    return result.ModifiedCount;&#xA;}&#xA;Console.WriteLine(&quot;Ready to update&quot;);&#xA;modifiedCount = UpdateField(collectionName,filterBy,filterValue,fieldToUpdate,valueToUpdate);&#xA;Console.WriteLine(&quot;Update ok&quot;);" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="711.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="mongoConnectionString">[in_mongoConnectionString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="mongoDatabase">[in_mongoDatabase]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="collectionName">[in_collectionName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="filterBy">[in_filterBy]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="filterValue">[in_filterValue]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="fieldToUpdate">[in_fieldToUpdate]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="valueToUpdate">[in_valueToUpdate]</InArgument>
+        <OutArgument x:TypeArguments="x:Int64" x:Key="modifiedCount">[out_modifiedCount]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <If Condition="[out_modifiedCount = 1]" DisplayName="If | entry has been modified" sap:VirtualizedContainerService.HintSize="711.2,252" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;1 Entry updated&quot;]" />
+      </If.Then>
+      <If.Else>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;No entry updated&quot;]" />
+      </If.Else>
+    </If>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="711.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Mongo_UpdateField started&quot;]" />
+  </Sequence>
+</Activity>
